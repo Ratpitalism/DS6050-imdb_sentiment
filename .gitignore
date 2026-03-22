@@ -205,3 +205,34 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Raw / large data
+data/raw/
+data/interim/
+datasets/
+*.parquet
+
+# Model checkpoints / weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+checkpoints/
+
+# Hugging Face / training outputs
+runs/
+wandb/
+outputs/checkpoints/
+logs/
+
+# Keep final deliverables
+!outputs/
+!outputs/plots/
+!outputs/plots/*.png
+!outputs/plots/*.jpg
+!outputs/tables/
+!outputs/tables/*.csv
+!outputs/tables/*.json
+!report/
+!report/*.pdf
