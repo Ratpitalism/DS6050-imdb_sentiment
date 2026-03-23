@@ -1,0 +1,4 @@
+Model,Accuracy,F1,AUC,Train time (s),Inference time (s)
+BiLSTM_T128_head+tail,0.7961,0.8,0.8782,4.018,2.3648
+Logistic Regression,0.8918,0.8924,0.9579,6.7234,4.2722
+RoBERTa_T512_head-only,0.9467,0.9469,0.9869,307.425,134.639
