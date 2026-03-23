@@ -28,9 +28,8 @@ class RoBERTaDataset(Dataset):
         )
 
     def _tokenize_head_tail(self, text):
-        # Tokenize using a head+tail truncation strategy while guaranteeing the final sequence does not exceed max_length
+        # Tokenize using a head+tail truncation strategy with max length
         # Tokenize without adding special tokens
-        # Using tokenizer(..., verbose=False) avoids noisy warnings
         encoded = self.tokenizer(
             text,
             add_special_tokens=False,
@@ -42,7 +41,6 @@ class RoBERTaDataset(Dataset):
 
         tokens = encoded["input_ids"]
 
-        # Leave room for <s> and </s>
         max_content_length = self.max_length - 2
 
         if len(tokens) > max_content_length:
@@ -50,11 +48,10 @@ class RoBERTaDataset(Dataset):
             tail_len = max_content_length - head_len
             tokens = tokens[:head_len] + tokens[-tail_len:]
 
-        # Add special tokens manually
+        # special tokens manually
         tokens = [self.tokenizer.cls_token_id] + tokens + [self.tokenizer.sep_token_id]
         attention_mask = [1] * len(tokens)
 
-        # Pad to max_length
         if len(tokens) < self.max_length:
             pad_len = self.max_length - len(tokens)
             tokens = tokens + [self.tokenizer.pad_token_id] * pad_len
@@ -90,7 +87,6 @@ class RoBERTaDataset(Dataset):
 
 class RoBERTaSentimentRunner:
     # End-to-end RoBERTa fine-tuning runner
-
     def __init__(
         self,
         model_name="roberta-base",
@@ -121,7 +117,6 @@ class RoBERTaSentimentRunner:
 
     def fit(self, train_df, val_df, max_length, truncation_strategy, device=None):
         # Fine-tune RoBERTa for one configuration
-
         if device is None:
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -162,7 +157,6 @@ class RoBERTaSentimentRunner:
 
     def predict_proba(self, df, max_length, truncation_strategy, device=None):
         # Predict positive-class probabilities for AUC computation
-
         if device is None:
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -200,7 +194,6 @@ class RoBERTaSentimentRunner:
 
     def predict(self, df, max_length, truncation_strategy, device=None):
         # Predict hard labels for a DataFrame
-
         probabilities = self.predict_proba(
             df=df,
             max_length=max_length,

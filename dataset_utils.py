@@ -22,13 +22,13 @@ def set_seed(seed=42):
 
 # Text cleaning / tokenization
 def simple_tokenize(text):
-    # Simple lowercase tokenizer for the BiLSTM pipeline.
+    # lowercase tokenizer for the BiLSTM pipeline.
     text = text.lower()
     return re.findall(r"\b\w+\b", text)
 
 
 def truncate_tokens(tokens, max_length, strategy="head-only"):
-    # Truncate a token list according to the project ablation settings.
+    # Truncate a token list by ablation settings
     # head-only : keep the first max_length tokens
     # head+tail : keep the first half and last half
 
@@ -48,13 +48,8 @@ def truncate_tokens(tokens, max_length, strategy="head-only"):
 
 
 def add_length_columns(df):
-
-    # Add both word-count and simple-token-count columns.
-
-    # word-count length (intuitive)
-    # token-count length (model processing)
-
-
+    # Add both word-count and simple-token-count columns
+    # # word-count length (intuitive) // token-count length (model processing)
     df = df.copy()
 
     token_lists = df["text"].apply(simple_tokenize)
@@ -74,10 +69,8 @@ def add_length_columns(df):
 
 
 def load_imdb_data(validation_size=5000, random_state=42):
-
     # Load IMDB from Hugging Face
     # The train/validation split is stratified by sentiment label & review length bin
-
     dataset = load_dataset("imdb")
 
     train_full_df = pd.DataFrame(dataset["train"])
@@ -87,15 +80,13 @@ def load_imdb_data(validation_size=5000, random_state=42):
     test_df = add_length_columns(test_df)
 
     train_full_df["stratify_key"] = (
-        train_full_df["label"].astype(str) + "_" + train_full_df["length_bin"].astype(str)
-    )
+        train_full_df["label"].astype(str) + "_" + train_full_df["length_bin"].astype(str))
 
     train_df, val_df = train_test_split(
         train_full_df,
         test_size=validation_size,
         random_state=random_state,
-        stratify=train_full_df["stratify_key"]
-    )
+        stratify=train_full_df["stratify_key"])
 
     train_df = train_df.drop(columns=["stratify_key"]).reset_index(drop=True)
     val_df = val_df.drop(columns=["stratify_key"]).reset_index(drop=True)
@@ -110,10 +101,7 @@ def build_vocab(texts, max_vocab_size=20000, min_freq=2):
     for text in texts:
         counter.update(simple_tokenize(text))
 
-    vocab = {
-        "<PAD>": 0,
-        "<UNK>": 1
-    }
+    vocab = {"<PAD>": 0,"<UNK>": 1}
 
     for token, freq in counter.most_common():
         if freq < min_freq:

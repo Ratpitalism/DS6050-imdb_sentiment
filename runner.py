@@ -71,9 +71,7 @@ def compute_metrics(y_true, y_pred, y_score=None):
 
 
 def compute_metrics_by_length(df, y_pred, y_score=None):
-    """
-    Compute metrics separately for short / medium / long reviews.
-    """
+    # Compute metrics separately for short / medium / long reviews.
     results = {}
 
     for length_name in ["short", "medium", "long"]:
@@ -95,9 +93,7 @@ def compute_metrics_by_length(df, y_pred, y_score=None):
 def package_results(model_name, split_name, overall_metrics, by_length_metrics,
                     training_time_seconds, inference_time_seconds,
                     max_length=None, truncation_strategy=None):
-    """
-    Flatten results into rows for CSV export.
-    """
+    # Flatten results into rows for CSV export.
     rows = []
 
     rows.append({
@@ -168,17 +164,14 @@ def save_misclassified_examples(df, y_pred, model_name, split_name, max_examples
 
 # Plot helpers
 def make_primary_length_plot(results_df):
-    """
-    Primary project figure:
-    line plot with review-length group on the x-axis and F1-score on the y-axis.
-    """
+    # line plot with review-length group on the x-axis and F1-score on the y-axis.
     subset = results_df[
         (results_df["split"] == "test") &
         (results_df["metric_scope"] == "by_length")
     ].copy()
 
-    # Keep one final representative configuration per model family
-    # For BiLSTM / RoBERTa, use the highest test F1 among overall rows
+    # one final representative configuration per model family
+    # BiLSTM / RoBERTa, use the highest test F1 among overall rows
     chosen_models = []
 
     overall_test = results_df[
@@ -257,7 +250,7 @@ def make_efficiency_plot(results_df):
 
 
 def make_ablation_plot(ablation_df, model_family, metric="f1"):
-    # Plot ablation performance vs max input length for one model family.
+    # Plot ablation performance vs max input length for one model family
     family_df = ablation_df[ablation_df["model_family"] == model_family].copy()
 
     plt.figure(figsize=(8, 5))
@@ -283,9 +276,7 @@ def make_ablation_plot(ablation_df, model_family, metric="f1"):
 
 # Model runners
 def run_logistic_regression(train_df, val_df, test_df):
-    """
-    Run the Logistic Regression baseline.
-    """
+    # Logistic Regression baseline
     print("\n" + "=" * 70)
     print("RUNNING LOGISTIC REGRESSION")
     print("=" * 70)
@@ -342,7 +333,7 @@ def run_logistic_regression(train_df, val_df, test_df):
 
 
 def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
-    # Run one BiLSTM ablation configuration.
+    # Run one BiLSTM ablation configuration
     print("\n" + "=" * 70)
     print(f"RUNNING BILSTM | max_length={max_length} | truncation={truncation_strategy}")
     print("=" * 70)
@@ -450,7 +441,7 @@ def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
 
 
 def run_roberta(train_df, val_df, test_df, max_length, truncation_strategy):
-    # Run one RoBERTa ablation configuration.
+    # Run one RoBERTa ablation configuration
     print("\n" + "=" * 70)
     print(f"RUNNING ROBERTA | max_length={max_length} | truncation={truncation_strategy}")
     print("=" * 70)
@@ -565,8 +556,8 @@ def main():
         print(f"GPU NAME: {torch.cuda.get_device_name(0)}")
     print("=" * 70)
 
-    # We use the Hugging Face IMDB dataset because it is a standard benchmark for sentiment analysis and includes predefined train/test splits
-    # We then create a stratified validation split from training
+    # Hugging Face IMDB dataset b/c it is a standard benchmark for sentiment analysis and includes predefined train/test splits
+    # make a stratified validation split from training
 
     train_df, val_df, test_df = load_imdb_data(
         validation_size=5000,

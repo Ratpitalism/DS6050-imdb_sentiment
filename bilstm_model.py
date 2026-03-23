@@ -11,7 +11,6 @@ from dataset_utils import build_vocab, encode_text_for_bilstm
 class BiLSTMDataset(Dataset):
     # PyTorch dataset for the BiLSTM model.
 
-
     def __init__(self, df, vocab, max_length, truncation_strategy):
         self.texts = df["text"].tolist()
         self.labels = df["label"].tolist()
@@ -146,7 +145,7 @@ class BiLSTMSentimentRunner:
             embedding_dim=self.embedding_dim,
             hidden_dim=self.hidden_dim,
             pad_index=0
-        ).to(device)
+            ).to(device)
 
         criterion = nn.BCEWithLogitsLoss()
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
