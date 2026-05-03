@@ -91,7 +91,7 @@ class BiLSTMSentimentRunner:
         embedding_dim=128,
         hidden_dim=128,
         batch_size=64,
-        num_epochs=2,
+        num_epochs=10,
         learning_rate=1e-3
     ):
         self.max_vocab_size = max_vocab_size
@@ -154,6 +154,7 @@ class BiLSTMSentimentRunner:
 
         self.model.train()
         for epoch in range(self.num_epochs):
+            epoch_loss = 0.0
             for batch_inputs, batch_labels in train_loader:
                 batch_inputs = batch_inputs.to(device)
                 batch_labels = batch_labels.to(device)
@@ -163,6 +164,11 @@ class BiLSTMSentimentRunner:
                 loss = criterion(logits, batch_labels)
                 loss.backward()
                 optimizer.step()
+
+                epoch_loss += loss.item()
+
+            avg_loss = epoch_loss / len(train_loader)
+            print(f"Epoch {epoch + 1}/{self.num_epochs} - Train Loss: {avg_loss:.4f}")
 
         end_time = time.time()
         self.training_time_seconds = end_time - start_time

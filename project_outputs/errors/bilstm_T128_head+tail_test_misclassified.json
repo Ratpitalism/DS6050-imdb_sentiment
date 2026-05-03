@@ -3,6 +3,13 @@
     {
       "true_label": 0,
       "predicted_label": 1,
+      "review_word_count": 103,
+      "review_token_count": 107,
+      "text": "Artificial melodrama with a screenplay adapted by Mel Dinelli from his play \"The Man\" concerns a boarding-house proprietress taking in a troubled handyman who may be homicidal. Despite solid work from Ida Lupino and Robert Ryan (both trying their best), this tedious yarn isn't very inventive within its one primary set (which quickly becomes visually dull) and underpopulated cast of characters (there is however a smart pooch who senses the worst!). Hokey and humorless, with a stilted direction from Harry Horner (perhaps Lupino should have directed?). Where's all the suspense promised by the ads? Dinelli also served as a co-producer. *1/2 from ****"
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
       "review_word_count": 21,
       "review_token_count": 24,
       "text": "Widow hires a psychopath as a handyman. Sloppy film noir thriller which doesn't make much of its tension promising set-up. (3/10)"
@@ -17,40 +24,19 @@
     {
       "true_label": 0,
       "predicted_label": 1,
-      "review_word_count": 74,
-      "review_token_count": 77,
-      "text": "This only gets bashed because it stars David Hasselhoff. Well, then let me bash it to. Compared to the garbage they call horror coming out nowadays, this film isn't too bad. It has the beautiful Leslie Cumming. She is super hot, but can't talk very well. There is a great scene with her when she is supernaturally raped. She shows off her nice body. Linda Blair does nothing here as well as Hasselhoff. 3/10"
-    },
-    {
-      "true_label": 0,
-      "predicted_label": 1,
-      "review_word_count": 54,
-      "review_token_count": 55,
-      "text": "I and a friend rented this movie. We both found the movie soundtrack and production techniques to be lagging. The movie's plot appeared to drag on throughout with little surprise in the ending. We both agreed that the movie could have been compressed into roughly an hour giving it more suspense and moving plot."
-    },
-    {
-      "true_label": 0,
-      "predicted_label": 1,
       "review_word_count": 43,
       "review_token_count": 45,
       "text": "There must be an error. This movie belongs with \"Plan 9\", and a lot others as a quite entertaining, silly diversion. You'll never accept you like it, yet you will watch it whenever it comes out on TV. It's as simple as that."
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 116,
+      "review_token_count": 121,
+      "text": "First of all, I wasn't sure who this film was aimed at - it seemed like a story for kids but had stuff in it kids wouldn't understand and find boring. There wasn't really much to it, Bruce Willis wasn't stretched as an actor at all. He did a lot of glancing to the side with that half smile of his - unless you are a big fan of his I wouldn't bother. And if it's the story you're interested in (guy who seems to have it all but is lacking emotionally is taught lessons from a child), I would go to see About A Boy. It has everything this film lacked, humor, sadness and reality."
     }
   ],
   "medium": [
-    {
-      "true_label": 0,
-      "predicted_label": 1,
-      "review_word_count": 361,
-      "review_token_count": 370,
-      "text": "STAR RATING: ***** Saturday Night **** Friday Night *** Friday Morning ** Sunday Night * Monday Morning <br /><br />Former New Orleans homicide cop Jack Robideaux (Jean Claude Van Damme) is re-assigned to Columbus, a small but violent town in Mexico to help the police there with their efforts to stop a major heroin smuggling operation into their town. The culprits turn out to be ex-military, lead by former commander Benjamin Meyers (Stephen Lord, otherwise known as Jase from East Enders) who is using a special method he learned in Afghanistan to fight off his opponents. But Jack has a more personal reason for taking him down, that draws the two men into an explosive final showdown where only one will walk away alive.<br /><br />After Until Death, Van Damme appeared to be on a high, showing he could make the best straight to video films in the action market. While that was a far more drama oriented film, with The Shepherd he has returned to the high-kicking, no brainer action that first made him famous and has sadly produced his worst film since Derailed. It's nowhere near as bad as that film, but what I said still stands.<br /><br />A dull, predictable film, with very little in the way of any exciting action. What little there is mainly consists of some limp fight scenes, trying to look cool and trendy with some cheap slo-mo/sped up effects added to them that sadly instead make them look more desperate. Being a Mexican set film, director Isaac Florentine has tried to give the film a Robert Rodriguez/Desperado sort of feel, but this only adds to the desperation.<br /><br />VD gives a particularly uninspired performance and given he's never been a Robert De Niro sort of actor, that can't be good. As the villain, Lord shouldn't expect to leave the beeb anytime soon. He gets little dialogue at the beginning as he struggles to muster an American accent but gets mysteriously better towards the end. All the supporting cast are equally bland, and do nothing to raise the films spirits at all.<br /><br />This is one shepherd that's strayed right from the flock. *"
-    },
-    {
-      "true_label": 0,
-      "predicted_label": 1,
-      "review_word_count": 134,
-      "review_token_count": 136,
-      "text": "First off let me say, If you haven't enjoyed a Van Damme movie since bloodsport, you probably will not like this movie. Most of these movies may not have the best plots or best actors but I enjoy these kinds of movies for what they are. This movie is much better than any of the movies the other action guys (Segal and Dolph) have thought about putting out the past few years. Van Damme is good in the movie, the movie is only worth watching to Van Damme fans. It is not as good as Wake of Death (which i highly recommend to anyone of likes Van Damme) or In hell but, in my opinion it's worth watching. It has the same type of feel to it as Nowhere to Run. Good fun stuff!"
-    },
     {
       "true_label": 0,
       "predicted_label": 1,
@@ -61,16 +47,30 @@
     {
       "true_label": 0,
       "predicted_label": 1,
-      "review_word_count": 190,
-      "review_token_count": 196,
-      "text": "Blind Date (Columbia Pictures, 1934), was a decent film, but I have a few issues with this film. First of all, I don't fault the actors in this film at all, but more or less, I have a problem with the script. Also, I understand that this film was made in the 1930's and people were looking to escape reality, but the script made Ann Sothern's character look weak. She kept going back and forth between suitors and I felt as though she should have stayed with Paul Kelly's character in the end. He truly did care about her and her family and would have done anything for her and he did by giving her up in the end to fickle Neil Hamilton who in my opinion was only out for a good time. Paul Kelly's character, although a workaholic was a man of integrity and truly loved Kitty (Ann Sothern) as opposed to Neil Hamilton, while he did like her a lot, I didn't see the depth of love that he had for her character. The production values were great, but the script could have used a little work."
+      "review_word_count": 184,
+      "review_token_count": 189,
+      "text": "Now, I LOVE Italian horror films. The cheesier they are, the better. However, this is not cheesy Italian. This is week-old spaghetti sauce with rotting meatballs. It is amateur hour on every level. There is no suspense, no horror, with just a few drops of blood scattered around to remind you that you are in fact watching a horror film. The \"special effects\" consist of the lights changing to red whenever the ghost (or whatever it was supposed to be) is around, and a string pulling bed sheets up and down. Oooh, can you feel the chills? The DVD quality is that of a VHS transfer (which actually helps the film more than hurts it). The dubbing is below even the lowest \"bad Italian movie\" standards and I gave it one star just because the dialogue is so hilarious! And what do we discover when she finally DOES look in the attic (in a scene that is daytime one minute and night the next)...well, I won't spoil it for anyone who really wants to see, but let's just say that it isn't very \"novel\"!"
     },
     {
       "true_label": 0,
       "predicted_label": 1,
-      "review_word_count": 184,
-      "review_token_count": 189,
-      "text": "Now, I LOVE Italian horror films. The cheesier they are, the better. However, this is not cheesy Italian. This is week-old spaghetti sauce with rotting meatballs. It is amateur hour on every level. There is no suspense, no horror, with just a few drops of blood scattered around to remind you that you are in fact watching a horror film. The \"special effects\" consist of the lights changing to red whenever the ghost (or whatever it was supposed to be) is around, and a string pulling bed sheets up and down. Oooh, can you feel the chills? The DVD quality is that of a VHS transfer (which actually helps the film more than hurts it). The dubbing is below even the lowest \"bad Italian movie\" standards and I gave it one star just because the dialogue is so hilarious! And what do we discover when she finally DOES look in the attic (in a scene that is daytime one minute and night the next)...well, I won't spoil it for anyone who really wants to see, but let's just say that it isn't very \"novel\"!"
+      "review_word_count": 391,
+      "review_token_count": 408,
+      "text": "I'm the type of guy who loves hood movies from New Jack City to Baby Boy to Killa Season, from the b grade to the Hollywood. but this movie was something different. i am no hater and this movie was kinda enjoyable. but some bits were just weird. well the acting wasn't to good, compared to Silkk The Shockers performance in Hot Boyz (quite good) and Ice-T in new Jack and SVU (great). the scene where Corrupt (Ice-T) kills the wanna be Jamaican dude he says something and lights himself on fire burning both Ice-T and the other dude, this kills the Jamaican, however Ice-T is unharmed, very similar to Ice's other movie Urban Menace (which stars both of these actors) were Snoops character is supernatural, however after this there is nothing suggested that Corrupt is like a demon. When MJ (Silkk) gets stabbed at first he struggling but after that he fights normally and was stabbed in the thigh-WITH OUT BLOOD. and when MJ confesses killing a cop cos the cop was beating up his friend Benny was weird, Benny isn't introduced in this movie and the scene isn't in the film. it does hold weight to the fact why Corrupt wants to kill MJ but is still makes u scratch your head. wen Jody writes a letter to Miss Jones character explaining what happened to them afterwords doesn't mention what happen 2 other main characters MJ and Lisa. the film did show the horror and poverty of the ghetto-which plagues the lives of Latinos and Blacks word wide-was a good part of the film, even though the clip of the projects was re-used thousands of times. and the scene where Miles kills the Latino brother by crashing his bike at full speed (not wearing a helmet) and running into my Latino brothers car would of killed him. the movie was similar to the film Urban Menace and half the actors were in both of these movies as well as the production team. it was OK tho. but me being from poverty i love hood films, however if u don't love em like i do Don't WATCH IT. only thing saving me from walking out is it reminded me of the first movie i made which was made with 100 dollars, and my love of the genre.<br /><br />Nathaniel Purez"
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 202,
+      "review_token_count": 218,
+      "text": "I quite enjoyed The Wrecking Crew (1999), which was the last of the three films in this series (the first being Urban Menace (1999) which I've yet to see). I know it was baaaaad, but the three leads did a pretty decent job, all things considered.<br /><br />This, however, was truly atrocious. Ice-T was dreadful, and he's the producer! Can't say I've ever heard of Silkk The Shocker (who apparently never learnt how to spell), but his performance was one of the worst I've ever seen in a movie.<br /><br />Miss Jones did pretty well in her small role, though she later went on to make some atrocious, racist \"jokes\" on her radio show after the SE Asian tsunami (plus other occasions sadly). Way to go, girl...<br /><br />No-one else comes out with any credit. Strangely, TJ Storm and Ernie Hudson (who are both pretty bad here) are far better in The Wrecking Crew, which was made, along with Urban Menace, at the same time as Corrupt. How that works, I don't know.<br /><br />I'm going to try the Ice-T commentary now, to see whether he apologises for the film, or tries to make us think it's a great piece of film-making."
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 201,
+      "review_token_count": 208,
+      "text": "I have no idea how anyone can give this movie high marks. I didn't rent it thinking it was the next great horror flick, the next great horror spoof, or the next great low-budget horror spoof. Obviously, this isn't meant to scare, but one fatal flaw with the production entirely sapped the joy out of the viewing experience. The sound editing was horrible. I had to work the volume control the entire movie. You can imagine how difficult it is to get into something - even a low-budget spoof - when you're either turning the volume up or down, or trying to anticipate the next time you have to do so. The regular dialogue is very low, and all screams, noises, etc., are VERY loud. We're not talking about toggling between 5 and 7 on the volume control, finding a happy medium at 6. We're talking toggling between 2 and 9 on the volume where it is virtually impossible to leave the volume alone. Again, this movie might be a decent example of what it is meant to be, but you're going to be spending so much time adjusting your volume control that you'll never have the chance to enjoy it."
     }
   ],
   "long": [
@@ -91,9 +91,9 @@
     {
       "true_label": 0,
       "predicted_label": 1,
-      "review_word_count": 770,
-      "review_token_count": 767,
-      "text": "Breaking Dawn starts in a Californian college as Professor Simon (associate producer Joe Morton) tells his students that they have to perform an intensive six week study of a mental patient in Cape State Hospital as a crucial part of their education, fail & they will never become qualified Doctors. A bright, young, attractive & intelligent student named Eve (Kelly Overton) is given a particularly difficult patient to study. His name is Don Wake (James Haven) & is a convicted killer, he was found covered in blood besides the dead body of a woman (Diane Verona) & her young daughter (Jenette McCurdy). At first Don won't even look at Eve much less talk to her, but like the trooper she is Eve persists in trying to figure him out. Eventually Don begins to talk but what he says frightens Eve, he says that someone is watching her & mentions the name Malachay. Eve then begins to see a dark shadowy figure at her every turn, as Don churns out the conspiracy theories & bizarre statements Eve slowly begins to lose her mind as the line between fantasy & reality becomes more & more blurred. Is there something more to the supposed nonsense that Don talks other than being the insane ravings of a psychiatric patient...?<br /><br />Written & directed by Mark Edwin Robinson I have nothing but negative feelings towards Breaking Dawn. Now, we all like a good twist ending, the sort of ending which catches us unawares, surprises us, works well with the rest of the film & stays in our memory like the cool twist endings to The Sixth Sense (1999) & Fight Club (1999) to name just two good examples & to a lesser extent the endings to films such as Scream (1996) where the identity of the killer comes a nice surprise & isn't that obvious. Then, of course, there are films whose endings spoil everything that has gone before & as an example lets take, oh I don't know lets say Breaking Dawn because I have never seen such an awful ending to a film, never. Breaking Dawn starts out as a decent psychological horror thriller with spooky things starting to happen to Eve, it's not the most action packed film ever by any stretch of the imagination but it holds ones interest, it's not the most absorbing film ever either but it is more than watchable & it's not that bad a film until the twist ending, I have to keep mentioning it because everything else up to that point (which was OK to be fair to it) suddenly becomes irrelevant. I am sure there are people out there who think they have this muddled mess of an ending figured out down to the last detail, all I can say is that no one will be able to explain this thing in a satisfactory way to me & as far as I'm concerned it doesn't make a bit of sense & never will. Breaking Dawn is crap & it's a waste of time watching it to be rewarded with the lamest ending in film history, it's as simple & straight forward as that.<br /><br />Director Robinson doesn't half make a mess of what could have been a decent thriller, maybe he thought what he had shot would play out OK or maybe it was ruined in the editing room but I'd imagine it was more likely down to a rubbish script as he tries to tie all the absurdities together within the space of a few muddled minutes & give us all a happier than happy final shot. He builds the tension quite well during the first 80 odd minutes but it's all for nought at the end of the day.<br /><br />Technically Breaking Dawn is fine & it is generally well made throughout. The acting is pretty good, Overton is nice & easy on the eyes & puts in a decent performance. Was it just me or did the guy who played Don look like John Morghen star of such Italian sleaze classics as Cannibal Apocalypse (1980), City of the Living Dead (1980), The House on the Edge of the Park (1980), Cannibal Ferox (1981), Stagefright (1987) & The Church (1989)? OK, maybe it was just me...<br /><br />Breaking Dawn is rubbish, I hated it all because of the final few minutes. Don't get me wrong it wasn't exactly getting me excited up to that point but it was OK. Definitely one to avoid as far as I'm concerned although it seems to have it's fair share of positive comments on the IMDb..."
+      "review_word_count": 544,
+      "review_token_count": 540,
+      "text": "Luscious Candace Bergen as a prim Victorian beauty, kidnapped by Sean Connery as a devilish desert Sheikh! How can you go wrong? How? Oh, let me count the ways!!! Earthy, primitive Sean Connery, exactly the right man to tame a brittle, classy beauty like Candace, is . . . well, underwhelming in the role. That's because, instead of having dialog about the real issues (\"you are a woman . . . I am a man!\") he has to babble nonsense about \"the will of Allah\" and \"the wind blows destiny across the desert sands.\" John Milius, a director known more for the worship of naked male bodies and brute military force than any insight (or interest) in conventional human relationships, has a maddening way of cutting away from his desert lovers every time it looks like Candace might get kissed. Instead of watching nature take its course with two fabulously attractive people in a picturesque landscape, we are treated to endless, (and I do mean ENDLESS) shots of Brian Keith flashing his walrus sized choppers and delivering gritty sermons on the joys of being Teddy Roosevelt. I have nothing against Teddy Roosevelt, but watching him test out his new rifle or make speeches about the heroic death of a big bear just doesn't excite me the way the love story between Candace Bergen and Sean Connery would have . . . if it had ever actually gotten underway! The weird thing is, Milius spends most of his time building up characters and story lines that have no resolution. Candace's two little children in the story both get more screen time than she does. There's no humor, no chemistry, no sizzle, in any of the things that happen to her in the desert. Unless you think it's funny that after weeks of galloping around on horseback her hair is still perfect.<br /><br />The only \"real\" moment in the story is when, late at night, Candace Bergen shakes her little daughter out of a sound sleep on soft cushions and says, \"we must escape.\" The little girl turns over and, without missing a beat, replies, \"but mother, I was sleeping!\" That one line sums up what's really missing from the story. No danger, suspense, or sizzle in the basic story line, of a cultivated lady in captivity. She (and her children) are both so snug and well cared for that it's hard to believe anyone is worked up about their fate.<br /><br />Mind you, if Candace herself had said the line it might have worked better. If the tension came from her enjoyment of her captivity, (or her delight at being in the arms of Sean Connery) and her guilt about all the trouble being caused by her abduction, then the story would have had some tension. But Milius makes the odd assumption that the audience is just as worked up as he is over whether Teddy Roosevelt will get the chance to prove his manhood three thousand miles away. In the end the pretty lady and her children don't seem to matter worth a damn to him . . . and since they're at the center of the story the whole thing seems rather dry and endless . . . like the burning desert sands."
     },
     {
       "true_label": 0,

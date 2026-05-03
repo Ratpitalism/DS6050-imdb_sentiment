@@ -344,7 +344,7 @@ def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
         embedding_dim=128,
         hidden_dim=128,
         batch_size=64,
-        num_epochs=2,
+        num_epochs=10,
         learning_rate=1e-3
     )
 

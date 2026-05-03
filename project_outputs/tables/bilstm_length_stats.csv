@@ -1,0 +1,2 @@
+Model family,Length type,Min,Median,Mean,Max
+BiLSTM,Words,4,173,231.16,2470

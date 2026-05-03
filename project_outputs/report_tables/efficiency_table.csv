@@ -1,4 +1,4 @@
 Model,Train time (s),Inference time (s)
-BiLSTM_T128_head+tail,4.018,2.3648
-Logistic Regression,6.7234,4.2722
-RoBERTa_T512_head-only,307.425,134.639
+BiLSTM_T256_head+tail,27.6571,2.5466
+Logistic Regression,7.2042,7.6365
+RoBERTa_T512_head-only,302.3306,123.3315

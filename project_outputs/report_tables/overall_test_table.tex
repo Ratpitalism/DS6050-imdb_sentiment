@@ -1,9 +1,13 @@
+\begin{table}
+\caption{Overall Test Table}
+\label{tab:overall_test_table}
 \begin{tabular}{lrrrrr}
 \toprule
 Model & Accuracy & F1 & AUC & Train time (s) & Inference time (s) \\
 \midrule
-BiLSTM_T128_head+tail & 0.796100 & 0.800000 & 0.878200 & 4.018000 & 2.364800 \\
-Logistic Regression & 0.891800 & 0.892400 & 0.957900 & 6.723400 & 4.272200 \\
-RoBERTa_T512_head-only & 0.946700 & 0.946900 & 0.986900 & 307.425000 & 134.639000 \\
+BiLSTM_T256_head+tail & 0.8502 & 0.8500 & 0.9151 & 27.6571 & 2.5466 \\
+Logistic Regression & 0.8918 & 0.8924 & 0.9579 & 7.2042 & 7.6365 \\
+RoBERTa_T512_head-only & 0.9374 & 0.9367 & 0.9832 & 302.3306 & 123.3315 \\
 \bottomrule
 \end{tabular}
+\end{table}

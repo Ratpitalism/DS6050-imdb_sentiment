@@ -1,0 +1,4 @@
+Length bin,Review count,Percent,Model
+short,12929,25.86,BiLSTM (words)
+medium,33377,66.75,BiLSTM (words)
+long,3694,7.39,BiLSTM (words)
