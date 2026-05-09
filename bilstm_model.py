@@ -188,6 +188,11 @@ class BiLSTMSentimentRunner:
 
         start_time = time.time()
 
+        if device.type == "cuda":
+            torch.cuda.synchronize()
+
+        start_time = time.time()
+
         with torch.no_grad():
             for batch_inputs, _ in eval_loader:
                 batch_inputs = batch_inputs.to(device)
@@ -195,7 +200,11 @@ class BiLSTMSentimentRunner:
                 probs = torch.sigmoid(logits).cpu().numpy()
                 probabilities.extend(probs.tolist())
 
+        if device.type == "cuda":
+            torch.cuda.synchronize()
+
         end_time = time.time()
+
         self.inference_time_seconds = end_time - start_time
 
         return np.array(probabilities)

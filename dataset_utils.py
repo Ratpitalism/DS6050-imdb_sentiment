@@ -64,7 +64,7 @@ def add_length_columns(df):
         else:
             return "long"
 
-    df["length_bin"] = df["review_token_count"].apply(assign_bin)
+    df["length_bin"] = df["review_word_count"].apply(assign_bin)
     return df
 
 

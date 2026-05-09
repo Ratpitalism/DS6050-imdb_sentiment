@@ -3,13 +3,6 @@
     {
       "true_label": 0,
       "predicted_label": 1,
-      "review_word_count": 74,
-      "review_token_count": 77,
-      "text": "This only gets bashed because it stars David Hasselhoff. Well, then let me bash it to. Compared to the garbage they call horror coming out nowadays, this film isn't too bad. It has the beautiful Leslie Cumming. She is super hot, but can't talk very well. There is a great scene with her when she is supernaturally raped. She shows off her nice body. Linda Blair does nothing here as well as Hasselhoff. 3/10"
-    },
-    {
-      "true_label": 0,
-      "predicted_label": 1,
       "review_word_count": 43,
       "review_token_count": 45,
       "text": "There must be an error. This movie belongs with \"Plan 9\", and a lot others as a quite entertaining, silly diversion. You'll never accept you like it, yet you will watch it whenever it comes out on TV. It's as simple as that."
@@ -34,6 +27,13 @@
       "review_word_count": 63,
       "review_token_count": 64,
       "text": "The Comic Strip featured actors from 'The Young One's' - a student based sitcom from the 80's. Comic Strip features included parodies of westerns, 'The famous 5', and The Professionals - all a lot funnier than this. Having said that Alexei Sayle puts in a good turn as a traffic cop with ambition and the soundtrack features great music from the era. 5/10"
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 74,
+      "review_token_count": 76,
+      "text": "Technically abominable (with audible \"pops\" between scenes)and awesomely amateurish, \"Flesh\" requires a lot of patience to sit through and will probably turn off most viewers; but the dialogue rings amazingly true and Joe Dallesandro, who exposes his body in almost every scene, also gives an utterly convincing performance. A curio, to be sure, but the more polished \"Trash\", made two years later, is a definite step forward. I suggest you watch that instead. (*1/2)"
     }
   ],
   "medium": [
@@ -43,6 +43,13 @@
       "review_word_count": 134,
       "review_token_count": 136,
       "text": "First off let me say, If you haven't enjoyed a Van Damme movie since bloodsport, you probably will not like this movie. Most of these movies may not have the best plots or best actors but I enjoy these kinds of movies for what they are. This movie is much better than any of the movies the other action guys (Segal and Dolph) have thought about putting out the past few years. Van Damme is good in the movie, the movie is only worth watching to Van Damme fans. It is not as good as Wake of Death (which i highly recommend to anyone of likes Van Damme) or In hell but, in my opinion it's worth watching. It has the same type of feel to it as Nowhere to Run. Good fun stuff!"
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 166,
+      "review_token_count": 175,
+      "text": "Just watched on UbuWeb this early experimental short film directed by William Vance and Orson Welles. Yes, you read that right, Orson Welles! Years before he gained fame for radio's \"The War of the Worlds\" and his feature debut Citizen Kane, Welles was a 19-year-old just finding his muse. Besides Vance and Welles, another player here was one Virginia Nicholson, who would become Orson's first wife. She plays a woman who keeps sitting on something that rocks back and forth courtesy of an African-American servant (Paul Edgerton in blackface). During this time a man (Welles) keeps passing her by (courtesy of the scene constantly repeating). I won't reveal any more except to say how interesting the silent images were as they jump-cut constantly. That's not to say this was any good but it was fascinating to watch even with the guitar score (by Larry Morotta) added in the 2005 print I watched. Worth a look for Welles enthusiasts and anyone with a taste of the avant-garde."
     },
     {
       "true_label": 0,
@@ -64,23 +71,9 @@
       "review_word_count": 189,
       "review_token_count": 193,
       "text": "I saw this movie as part of a Billy Graham program. The church I attend was part of a community wide outreach to present God and Christianity to our community (Hartford, Ct. USA). I was one of the counselors who helped attendees (who were invited to come forward and make whatever kind of religious profession they wanted...and to follow up on them after the movie. As such, it did what it was supposed to do, and I personally found it to be a medium to strengthen my faith in God.I also found it to be very helpful to those I counseled. I especially like the work of Kim Darby in this movie. And the parents (the Wintons?) were , in a way, a little overdrawn....no one says to their child if they think that he or she may be the parent of an illegitimate child something like the Wintons did \"oh, no, no, not thaaat.\" That isn't exactly what they said, but the sympaathetic audience I saw had a laugh at whatever it was they did say, and also at the son's emphatic \"No, MOm, not me.\" Don Berghuis"
-    },
-    {
-      "true_label": 0,
-      "predicted_label": 1,
-      "review_word_count": 185,
-      "review_token_count": 192,
-      "text": "I think that you can not imagine how these people really work...!! Before I came to the studios to watch the guys work there, I actually thought quite the same as you do. But since I saw and did the work the guys on that TV-show have to do, I have to say that they really do deserve respect for what they are doing all day long. That really is no easy work. And also the actors, which in your eyes may be terribly bad, are really great people and a lot of them really can act! I don't think that the material given to them can really show that, as I think this material isn't very good. But THEY are truly good! So I don't think that you, before you haven't seen these guys doing there work, can judge over them! And I shouldn't have judged over them as well before I met them, but I did and am now terribly ashamed of it. So please, do not allow yourself to judge over these great people unless you haven't seen them doing there job."
     }
   ],
   "long": [
-    {
-      "true_label": 0,
-      "predicted_label": 1,
-      "review_word_count": 529,
-      "review_token_count": 563,
-      "text": "OK, so my summary line is a cheap trick. But the movie is full of them and it gets absurdly praised, so...<br /><br />I caught this one on TV (uncut, as TV here shows all movies, that's for you Americans who might say I didn't like it because I saw a cut TV version - fortunately that's only an US thing), and had no idea about what it was. I switched on, caught the last minutes of a show, and the movie began. Within a minute, I was begging it was a comedy, given the particularly ridiculous clich\u00e9d beginning (yes, it's a bad movie-within-the-movie, I know, but what a way to try to keep the viewer interested! I don't even know why I didn't switch channels). And, yes, in fact the movie turned out to be a comedy, albeit an unintentional one.<br /><br />Marina Zudina is pretty enough, but gosh, what a dreadful performance! While casting a foreigner in the role is smart enough (she doesn't talk so bye bye language barrier), yet, sorry, Marina baby, playing mute doesn't mean impersonating Harpo Marx. Her acting is unintentionally funny in many moments, just look at her when she draws an X in the air while stalked by the killer. He wants to kill you, it's no time to play Zorro. We get plenty of \"running upstairs\" stuff passing for tension, as in the worst slashers, and things like pulling a carpet and a bad guy shots the other. Ugh! Will Hollywood ever learn? Yet the best/worst pearl is having a guy electrocuted in a bathtub and... Well, I have never seen anyone being electrocuted to death in a bathtub, but I'm sure you can't see the blue cartoon rays in real life, do you? And how about immediately trusting a mean-looking guy because he SAYS he's a cop, and not asking him to show you his credentials? OK, so he turns out to be a real cop. But still, not asking for the badge makes no sense (plot-wise, we could always think the credentials might be phony or he might be a crooked cop. Screen writing 101). And how about the big twist? Don't tell me you didn't see that coming from 200 miles away...<br /><br />I feel sorry for poor old Alec Guinness and his useless stock footage cameo. Now I think about this, what's the point in giving him a \"Mystery Guest Star\" credit... in the END titles? The movie's over, there's no mystery anymore, and everybody and their brother have identified Guinness (even non-movie buffs will recognize \"the old guy from 'Star Wars'\"). Yet better off this way, so we can pretend it's not the late great actor.<br /><br />People keep comparing this to, of all people, Hitchcock. I suppose it has to be John Hitchcock the milkman, as the late Sir Alfred would feel embarrassed out of watching this, let alone making it. And this gets a 6.8/10???? It's Bottom 100 material! But then, we're talking a rating system that allows 'The Lord of the Rings: The Return of the King' to appear as the third best movie ever made (check Top 100), so...<br /><br />2/10."
-    },
     {
       "true_label": 0,
       "predicted_label": 1,
@@ -108,6 +101,13 @@
       "review_word_count": 528,
       "review_token_count": 540,
       "text": "Lonesome Dove is my favorite western second only to The Searchers with John Wayne. I watch Lonesome Dove about every 6 months and never get tired of it. I have read all the LD books, although I cannot remember much of Comanche Moon. I too looked forward to this mini-series and decided to tape it on our DVR so we could fast forward through commercials. Unfortunately, I messed up and didn't record the first part, but decided to watch the other parts and try to pick up.<br /><br />There is nobody that can ever compete with Robert Duvall or Tommy Lee Jones, and I was expecting to be disappointed and I was.<br /><br />Although there were so many things that didn't ring true, the most apparent to me was when Nellie died the day before and Gus was out on the range, it switched over to Clara writing him a letter from Nebraska telling him how sorry she was to hear of her death. How in the world could she have known the next day way out in Nebraska? Additionally, it was supposed to be 7 years later after her leaving and her children looked to be about 6-7 years old, maybe a little younger, yet more time went on before they actually moved to Lonesome Dove, and in Lonesome Dove they had been there about 10 years or longer before leaving to Montana. When they stopped at Clara's in Nebraska, which probably took another 6 months on the trail, the girls looked to be about 10-13, since they were playing in the yard like little children. The math just does not add up.<br /><br />I agree that the man who played Gus had a lot of his mannerisms and looked a little like Gus may have looked as a young man.<br /><br />I am also a little confused about one thing. The captive white girl that they brought back - was she the one they captured when they raided Austin? They said she had been captured 25 years ago, but if she was the one captured in Austin, it was only 7 years later when this took place in the movie. Was she captured earlier? I remember seeing a captive girl after they raided the town and don't know if this is the same one. If someone can explain since I missed Part 1. If it had been 25 years, she would probably be over 40 years old when they found her since she looked to be grown lying on the ground. Also, the way they were ravaging her when they captured her, it is hard to believe she would have lived to go on to be married and having Indian children.<br /><br />I have to admit though, nothing is worse than John Voight playing Call in the sequel to Lonesome Dove or the unbelievable marriage of Lorena to Pea Eye in the McMurty sequel to Lonesome Dove, which was never explained either. Also, the way he killed Newt off was I hear from spite for them doing the sequel with John Voight without his approval.<br /><br />If anyone can clear up these discrepancies, I would appreciate."
+    },
+    {
+      "true_label": 0,
+      "predicted_label": 1,
+      "review_word_count": 539,
+      "review_token_count": 559,
+      "text": "When Family Guy first premiered, I was not in a discriminating mood. With the 1990s containing a wealth of clever, surreal cartoons, why should I be? Nickelodeon produced Doug; Ren and Stimpy and Rockos Modern Life among other fine cartoons(Yes, this includes Spongebob).All had quirky, dreamlike animation and surprisingly sophisticated stories and dialog. The Simpsons became an outright phenomenon, perhaps not as brilliant as its biggest defenders claim it to be, but a very fine investment of your time and certainly dismisses the false axiom that all TV is junk. South Park started out as a crude but hilarious attack on everything with unique and intelligent satire underneath. It evolved to become a Monty Python- esquire show with outrageous concepts and brutally swift and sharp societal critiques(Such as their defense of the noble underpants gnomes) and eventually settled to be entirely self referential and \"meta\" like the Simpsons did, and has unfortunately jumped the shark. Family Guy is superficially like The Simpsons and South Park. It pushes buttons and is a favorite among college students and bestiality enthusiasts. However, what it has in loquacity it lacks in true wit.<br /><br />The show is famous for its use of gimmicks, especially for flashbacks. Many are references to bad TV sitcoms or commercials. Some are funny(Especially from the first two seasons), most are not. Are references inherently funny? I'm not sure, but they are mostly what the show stands on considering that its characters are painfully uninteresting. Where Homer and Bart have charm, and Cartman has an artillery of self awareness and pure outrageousness to back up his awful behavior, Peter Griffin has no excuse. He's just a loud, obnoxious pig. Anything funny coming from his character is only because the writers forget how to be unfunny that day. Lois is also very shallow and dull; Meg is a prop, only to be abused; Chris is borderline retarded and only occasionally funny, and the two main stars of the show(Stewie and Brian) are so inconsistent in their characterizations that it all really kind of pointless.<br /><br />Other gimmicks I can't stand are when a character points to something obviously and lingers on it for an uncomfortably long time. This happens a lot lately, and I can't bear it any longer. Not just the oft mentioned chicken that likes to beat Peter up, I'm talking about the painful moments where they talk about pop culture and prod it as if they are alien spectators. That's not wit or even ironic humor, it's totally boring and lifeless.<br /><br />Not that the show can't be funny, in fact some of the earlier episodes had me rolling. Highlights include the pilot episode, where Peter loses touch with reality after losing his precious television; when Peters religious zealot father shows up and wreaks havoc; When Peter becomes a narc at Megs school, and the \"pancake\" episode. I suspect these are the episodes that accidentally incorporated actual human traits in its characters, or merely were times the writers had actual comedic inspiration.<br /><br />One last thing, the show is not offensive. It's only offensive to those who wouldn't watch the show in the first place, so it's almost like a circle jerk to the choir of hipsters."
     }
   ]
 }

@@ -127,6 +127,24 @@ def package_results(model_name, split_name, overall_metrics, by_length_metrics,
 
     return rows
 
+def add_word_length_bins(df):
+    """
+    Add shared word-count-based length bins for all models.
+    This ensures LR, BiLSTM, and RoBERTa are evaluated on the same review groups.
+    """
+    df = df.copy()
+
+    df["review_word_count"] = df["text"].str.split().str.len()
+
+    df["length_bin"] = pd.cut(
+        df["review_word_count"],
+        bins=[0, 128, 512, float("inf")],
+        labels=["short", "medium", "long"],
+        right=True
+    )
+
+    return df
+
 
 # Error analysis
 def save_misclassified_examples(df, y_pred, model_name, split_name, max_examples_per_bin=5):
@@ -282,21 +300,25 @@ def run_logistic_regression(train_df, val_df, test_df):
     print("=" * 70)
 
     model = LogisticRegressionSentimentModel(
-        max_features=20000,
+        max_features=50000,
         max_iter=1000,
         random_state=42
     )
 
     model.fit(train_df)
 
-    val_pred = model.predict(val_df)
+    # Validation inference
     val_score = model.predict_proba(val_df)
+    val_pred = (val_score >= 0.5).astype(int)
+    val_inference_time = model.inference_time_seconds
 
     val_overall = compute_metrics(val_df["label"].values, val_pred, val_score)
     val_by_length = compute_metrics_by_length(val_df, val_pred, val_score)
 
-    test_pred = model.predict(test_df)
+    # Test inference
     test_score = model.predict_proba(test_df)
+    test_pred = (test_score >= 0.5).astype(int)
+    test_inference_time = model.inference_time_seconds
 
     test_overall = compute_metrics(test_df["label"].values, test_pred, test_score)
     test_by_length = compute_metrics_by_length(test_df, test_pred, test_score)
@@ -312,21 +334,27 @@ def run_logistic_regression(train_df, val_df, test_df):
     save_misclassified_examples(test_df, test_pred, "logreg", "test")
 
     rows = []
+
     rows.extend(package_results(
         model_name="Logistic Regression",
         split_name="validation",
         overall_metrics=val_overall,
         by_length_metrics=val_by_length,
         training_time_seconds=model.training_time_seconds,
-        inference_time_seconds=model.inference_time_seconds
+        inference_time_seconds=val_inference_time,
+        max_length=None,
+        truncation_strategy=None
     ))
+
     rows.extend(package_results(
         model_name="Logistic Regression",
         split_name="test",
         overall_metrics=test_overall,
         by_length_metrics=test_by_length,
         training_time_seconds=model.training_time_seconds,
-        inference_time_seconds=model.inference_time_seconds
+        inference_time_seconds=test_inference_time,
+        max_length=None,
+        truncation_strategy=None
     ))
 
     return rows
@@ -356,34 +384,28 @@ def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
         device=device
     )
 
-    val_pred = model.predict(
-        df=val_df,
-        max_length=max_length,
-        truncation_strategy=truncation_strategy,
-        device=device
-    )
+    # Validation inference: run predict_proba once, then threshold manually
     val_score = model.predict_proba(
         df=val_df,
         max_length=max_length,
         truncation_strategy=truncation_strategy,
         device=device
     )
+    val_pred = (val_score >= 0.5).astype(int)
+    val_inference_time = model.inference_time_seconds
 
     val_overall = compute_metrics(val_df["label"].values, val_pred, val_score)
     val_by_length = compute_metrics_by_length(val_df, val_pred, val_score)
 
-    test_pred = model.predict(
-        df=test_df,
-        max_length=max_length,
-        truncation_strategy=truncation_strategy,
-        device=device
-    )
+    # Test inference: run predict_proba once, then threshold manually
     test_score = model.predict_proba(
         df=test_df,
         max_length=max_length,
         truncation_strategy=truncation_strategy,
         device=device
     )
+    test_pred = (test_score >= 0.5).astype(int)
+    test_inference_time = model.inference_time_seconds
 
     test_overall = compute_metrics(test_df["label"].values, test_pred, test_score)
     test_by_length = compute_metrics_by_length(test_df, test_pred, test_score)
@@ -404,23 +426,25 @@ def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
     )
 
     rows = []
+
     rows.extend(package_results(
         model_name=f"BiLSTM_T{max_length}_{truncation_strategy}",
         split_name="validation",
         overall_metrics=val_overall,
         by_length_metrics=val_by_length,
         training_time_seconds=model.training_time_seconds,
-        inference_time_seconds=model.inference_time_seconds,
+        inference_time_seconds=val_inference_time,
         max_length=max_length,
         truncation_strategy=truncation_strategy
     ))
+
     rows.extend(package_results(
         model_name=f"BiLSTM_T{max_length}_{truncation_strategy}",
         split_name="test",
         overall_metrics=test_overall,
         by_length_metrics=test_by_length,
         training_time_seconds=model.training_time_seconds,
-        inference_time_seconds=model.inference_time_seconds,
+        inference_time_seconds=test_inference_time,
         max_length=max_length,
         truncation_strategy=truncation_strategy
     ))
@@ -434,7 +458,7 @@ def run_bilstm(train_df, val_df, test_df, max_length, truncation_strategy):
         "f1": test_overall["f1"],
         "auc": test_overall["auc"],
         "training_time_seconds": model.training_time_seconds,
-        "inference_time_seconds": model.inference_time_seconds
+        "inference_time_seconds": test_inference_time
     }
 
     return rows, ablation_row
@@ -564,6 +588,10 @@ def main():
         random_state=42
     )
 
+    train_df = add_word_length_bins(train_df)
+    val_df = add_word_length_bins(val_df)
+    test_df = add_word_length_bins(test_df)
+
     print(f"Train size: {len(train_df)}")
     print(f"Validation size: {len(val_df)}")
     print(f"Test size: {len(test_df)}")
@@ -576,32 +604,32 @@ def main():
     all_rows.extend(run_logistic_regression(train_df, val_df, test_df))
 
 
-    # BiLSTM ablations
-    for max_length in [128, 256, 512]:
-        for truncation_strategy in ["head-only", "head+tail"]:
-            rows, ablation_row = run_bilstm(
-                train_df=train_df,
-                val_df=val_df,
-                test_df=test_df,
-                max_length=max_length,
-                truncation_strategy=truncation_strategy
-            )
-            all_rows.extend(rows)
-            ablation_rows.append(ablation_row)
+    # # BiLSTM ablations
+    # for max_length in [128, 256, 512]:
+    #     for truncation_strategy in ["head-only", "head+tail"]:
+    #         rows, ablation_row = run_bilstm(
+    #             train_df=train_df,
+    #             val_df=val_df,
+    #             test_df=test_df,
+    #             max_length=max_length,
+    #             truncation_strategy=truncation_strategy
+    #         )
+    #         all_rows.extend(rows)
+    #         ablation_rows.append(ablation_row)
 
 
-    # RoBERTa ablations
-    for max_length in [128, 256, 512]:
-        for truncation_strategy in ["head-only", "head+tail"]:
-            rows, ablation_row = run_roberta(
-                train_df=train_df,
-                val_df=val_df,
-                test_df=test_df,
-                max_length=max_length,
-                truncation_strategy=truncation_strategy
-            )
-            all_rows.extend(rows)
-            ablation_rows.append(ablation_row)
+    # # RoBERTa ablations
+    # for max_length in [128, 256, 512]:
+    #     for truncation_strategy in ["head-only", "head+tail"]:
+    #         rows, ablation_row = run_roberta(
+    #             train_df=train_df,
+    #             val_df=val_df,
+    #             test_df=test_df,
+    #             max_length=max_length,
+    #             truncation_strategy=truncation_strategy
+    #         )
+    #         all_rows.extend(rows)
+    #         ablation_rows.append(ablation_row)
 
 
     # Save result tables
@@ -621,10 +649,10 @@ def main():
     # Save plots
     make_primary_length_plot(results_df)
     make_efficiency_plot(results_df)
-    make_ablation_plot(ablation_df, model_family="BiLSTM", metric="f1")
-    make_ablation_plot(ablation_df, model_family="RoBERTa", metric="f1")
-    make_ablation_plot(ablation_df, model_family="BiLSTM", metric="auc")
-    make_ablation_plot(ablation_df, model_family="RoBERTa", metric="auc")
+    # make_ablation_plot(ablation_df, model_family="BiLSTM", metric="f1")
+    # make_ablation_plot(ablation_df, model_family="RoBERTa", metric="f1")
+    # make_ablation_plot(ablation_df, model_family="BiLSTM", metric="auc")
+    # make_ablation_plot(ablation_df, model_family="RoBERTa", metric="auc")
 
     print("\n" + "=" * 70)
     print("RUN COMPLETE")
